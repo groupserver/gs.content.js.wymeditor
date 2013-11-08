@@ -17,8 +17,10 @@ function gs_content_js_wymeditor_init() {
 }
 
 jQuery(window).load(function () {
-    var modules=null;
-
-    modules = '/++resource++wymeditor-1.0.0b5/jquery.wymeditor.js';
+    var migrate=null, modules=null;
+    // Partly nicked from Google Analytics
+    migrate = ('https:' == document.location.protocol ? 'https://' : 'http://')
+        + 'code.jquery.com/jquery-migrate-1.2.1.min.js';
+    modules = [migrate, '/++resource++wymeditor-1.0.0b5/jquery.wymeditor.js'];
     gsJsLoader.with_module(modules, gs_content_js_wymeditor_init);
 });
