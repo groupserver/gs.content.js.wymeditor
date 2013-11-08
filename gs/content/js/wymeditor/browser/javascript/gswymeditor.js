@@ -8,7 +8,7 @@ function gs_content_js_wymeditor_init() {
     textElementSelector = scriptElement.attr('data-text-element');
     submitButtonSelector = scriptElement.attr('data-submit');
 
-    o = {updateSelector: textElementSelector,
+    o = {updateSelector: submitButtonSelector,
          basePath: '/++resource++wymeditor-1.0.0b5/',
          wymPath: '/++resource++wymeditor-1.0.0b5/jquery.wymeditor-min.js',
          jQueryPath: '/++resource++jquery-1.9.1.min.js',
