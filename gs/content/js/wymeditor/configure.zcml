@@ -2,13 +2,9 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
-  <browser:resource
-    name="gs-content-js-loader-20130111.js"
-    file="browser/javascript/loader.js"
-    permission="zope2.Public" />
-  <browser:resource
-    name="gs-content-js-loader-min-20130111.js"
-    file="browser/javascript/loader-min.js"
+  <browser:resourceDirectory
+    name="wymeditor-1.0.0b5"
+    directory="browser/javascript/"
     permission="zope2.Public" />
 
 </configure>
