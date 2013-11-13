@@ -1,0 +1,114 @@
+/*
+ * iframe CSS for the GroupServer skin for the WYMeditor.
+ *
+ * Copyright © 2013 OnlineGroups.net and Contributors.
+ * All Rights Reserved. Licensed under the MIT (MIT-license.txt)
+ * <http://source.iopen.net/groupserver/gs.content.js.wymeditor>
+ *
+ * Based on the "default" iframe code.
+ *
+ * WYMeditor : what you see is What You Mean web-based editor
+ * Copyright (c) 2005 - 2009 Jean-Francois Hovinne, http://www.wymeditor.org/
+ * Dual licensed under the MIT (MIT-license.txt)
+ * and GPL (GPL-license.txt) licenses.
+ *
+ * For further information visit:
+ *        http://www.wymeditor.org/
+ *
+ * File Name:
+ *        wymeditor.css
+ *        Main editor css file.
+ *        See the documentation for more info.
+ *
+ * File Authors:
+ *        Jean-Francois Hovinne (jf.hovinne a-t wymeditor dotorg)
+ *        Daniel Reszka (d.reszka a-t wymeditor dotorg)
+ *        Gyuris Gellért (bubu a-t ujevangelizacio dothu)
+*/
+
+/* VISUAL FEEDBACK */
+
+/* basic */
+body {
+    background: #eeeeee;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.667; /* 20px */
+}
+
+h1 {font-size:28px;}
+h2 {font-size:20px;}
+h3 {font-size:16px;}
+h4, h5, h6 {font-size:16px;}
+h1, h2, h3 {font-weight: bold;}
+
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+table,
+blockquote,
+pre           { background: #FFFFFF no-repeat 2px 2px;
+                padding:10px 5px 5px;
+                margin: 10px 0;}
+
+td            { background: #F4F4F4; }
+th            { background: #eeeeee; }
+ul,
+ol            { border-left:20px solid #cccccc; padding:0px 5px; }
+caption       { background: #eeeeee; padding: 5px; font-weight: bold; }
+table         { font-size: 12px; width: 500px; }
+td            { width: 25%; }
+blockquote    { margin-left: 30px; }
+pre           { background-color:transparent; border: 1px solid white; }
+
+/* Gecko min height fix */
+td            { height: 1.6em; }
+
+/* labels */
+p         { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-p.png); }
+div       { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-div.png); }
+h1        { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-h1.png); }
+h2        { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-h2.png); }
+h3        { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-h3.png); }
+h4        { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-h4.png); }
+h5        { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-h5.png); }
+h6        { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-h6.png); }
+blockquote{ background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-blockquote.png); }
+pre       { background-image: url(/++resource++wymeditor-1.0.0b5/iframe/default/lbl-pre.png); }
+
+/* specific HTML elements */
+caption   { text-align: left; }
+img       { margin-right: 5px;
+            border-style: solid;
+            border-color: gray;
+            border-width: 0; }
+a img     { border-width: 1px; border-color: #cccccc; }
+acronym   { border: 1px solid gray; }
+span      { background-color: #eee; }
+
+/* visual feedback for non-valid nesting of elements*/
+  h1 h1, h1 h2, h1 h3, h1 h4, h1 h5, h1 h6, h1 p, h1 pre, h1 address,
+  h2 h1, h2 h2, h2 h3, h2 h4, h2 h5, h2 h6, h2 p, h2 pre, h2 address,
+  h3 h1, h3 h2, h3 h3, h3 h4, h3 h5, h3 h6, h3 p, h3 pre, h3 address,
+  h4 h1, h4 h2, h4 h3, h4 h4, h4 h5, h4 h6, h4 p, h4 pre, h4 address,
+  h5 h1, h5 h2, h5 h3, h5 h4, h5 h5, h5 h6, h5 p, h5 pre, h5 address,
+  h6 h1, h6 h2, h6 h3, h6 h4, h6 h4, h6 h6, h6 p, h6 pre, h6 address,
+  p h1, p h2, p h3, p h4, p h5, p h6, p pre, p address,
+  pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, pre p, pre pre, pre address,
+  address h1, address h2, address h3, address h4, address h5, address h6,
+  address p, address pre, address address
+  { background-color: #999999 !important;
+    border: 1px solid red !important;
+    font-size: 12px !important;
+    font-weight: normal; }
+
+/* Spacer BRs shouldn't add much whitespace */
+br { height: 5px; line-height: 5px; }
+

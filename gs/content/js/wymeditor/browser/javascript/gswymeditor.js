@@ -1,8 +1,8 @@
 jQuery.noConflict();
 
 function gs_content_js_wymeditor_init() {
-    var scriptElement=null, textElementSelector=null, submitButtonSelector=null,
-    o=null, classesItems=null;
+    var scriptElement=null, textElementSelector=null,
+        submitButtonSelector=null, o=null, classesItems=null;
 
     scriptElement = jQuery('script.gs-content-js-wymeditor');
     textElementSelector = scriptElement.attr('data-text-element');
@@ -22,8 +22,10 @@ function gs_content_js_wymeditor_init() {
 
     o = {updateSelector: submitButtonSelector,
          basePath: '/++resource++wymeditor-1.0.0b5/',
-         wymPath: '/++resource++wymeditor-1.0.0b5/jquery.wymeditor-min.js',
+         wymPath: '/++resource++wymeditor-1.0.0b5/jquery.wymeditor.js',
          jQueryPath: '/++resource++jquery-1.9.1.min.js',
+         iframeBasePath: '/++resource++wymeditor-1.0.0b5/skins/gs/iframe/',
+         dialogFeatures: 'menubar=no,toobar=no,width=390,height=330',
          lang: 'en',
          skin: 'gs',
          classesItems: classesItems}
