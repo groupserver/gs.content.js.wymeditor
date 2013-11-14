@@ -1,6 +1,6 @@
-WYMeditor.SKINS.gs={init:function(c){function b(f,d,g){var h=null,e=null;h=jQuery('<ul class="btn-group"></ul>');
-h.addClass(g);h.appendTo(f);e=jQuery(d);e.detach();h.append(e);return h}var a=null;
-jQuery(c._box).attr("role","application");jQuery(c._box).find(c._options.classesSelector).addClass("wym_panel");
+jQuery.noConflict();WYMeditor.SKINS.gs={init:function(c){function b(f,d,g){var h=null,e=null;
+h=jQuery('<ul class="btn-group"></ul>');h.addClass(g);h.appendTo(f);e=jQuery(d);e.detach();
+h.append(e);return h}var a=null;jQuery(c._box).attr("role","application");jQuery(c._box).find(c._options.classesSelector).addClass("wym_panel");
 jQuery(c._box).find(c._options.containersSelector).addClass("wym_panel");a=jQuery(c._box).find("div.wym_tools");
 a.addClass("btn-toolbar").find("a").addClass("btn");jQuery(c._box).find(c._options.toolsSelector).addClass("wym_buttons");
 b(a,".wym_tools_strong, .wym_tools_emphasis, .wym_tools_superscript, .wym_tools_subscript","gs_buttons_style");
