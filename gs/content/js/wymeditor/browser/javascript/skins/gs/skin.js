@@ -1,3 +1,19 @@
+// GroupServer skin for WYMeditor by Michael JasonSmith
+//
+// Copyright © 2013 OnlineGroups.net and Contributors.
+// All Rights Reserved. Licensed under the MIT (MIT-license.txt)
+// <http://source.iopen.net/groupserver/gs.content.js.wymeditor>
+//
+// Based on the "default" skin.
+//
+// Copyright (c) 2005 - 2009 Jean-Francois Hovinne, http://www.wymeditor.org/
+// Dual licensed under the MIT (MIT-license.txt)
+// and GPL (GPL-license.txt) licenses.
+//
+// For further information visit:
+//      http://www.wymeditor.org/
+//
+jQuery.noConflict();
 WYMeditor.SKINS['gs'] = {
 
     init: function(wym) {
