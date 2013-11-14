@@ -47,7 +47,8 @@ setup(name='gs.content.js.wymeditor',
     install_requires=[
         'setuptools',
         'gs.content.js.jquery.base',
-    ],
+        'gs.content.js.loader', 
+   ],
     extras_require={'zope': ['zope.browserresource', ]},
     entry_points="""
     # -*- Entry points: -*-
