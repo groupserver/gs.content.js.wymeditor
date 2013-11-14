@@ -1,1 +1,4 @@
-OnlineGroups.Net and Contributors
+This egg is Copyright 2013 OnlineGroups.Net and Contributors.
+
+WYMeditor is Copyright (c) 2005 - 2010 Jean-Francois Hovinne,
+http://www.wymeditor.org/
