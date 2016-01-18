@@ -1,6 +1,6 @@
 'use strict';
 //
-// Copyright © 2013 OnlineGroups.net and Contributors.
+// Copyright © 2013, 2015 OnlineGroups.net and Contributors.
 // All Rights Reserved.
 
 // This software is subject to the provisions of the Zope Public
@@ -52,6 +52,7 @@ jQuery(window).load(function() {
     migrate = ('https:' == document.location.protocol ?
                'https://' : 'http://') +
         'code.jquery.com/jquery-migrate-1.2.1.min.js';
-    modules = [migrate, '/++resource++wymeditor-1.1.1/jquery.wymeditor.js'];
+    modules = [migrate, '/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
+               '/++resource++wymeditor-1.1.1/skins/gs/skin.js'];
     gsJsLoader.with_module(modules, gs_content_js_wymeditor_init);
 });
