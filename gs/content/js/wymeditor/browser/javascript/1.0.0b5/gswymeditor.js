@@ -1,3 +1,4 @@
+'use strict';
 //
 // Copyright © 2013 OnlineGroups.net and Contributors.
 // All Rights Reserved.
@@ -14,8 +15,8 @@
 jQuery.noConflict();
 
 function gs_content_js_wymeditor_init() {
-    var scriptElement=null, textElementSelector=null,
-        submitButtonSelector=null, o=null, classesItems=null;
+    var scriptElement = null, textElementSelector = null,
+        submitButtonSelector = null, o = null, classesItems = null;
 
     scriptElement = jQuery('script.gs-content-js-wymeditor');
     textElementSelector = scriptElement.attr('data-text-element');
@@ -41,15 +42,16 @@ function gs_content_js_wymeditor_init() {
          dialogFeatures: 'menubar=no,toobar=no,width=390,height=330',
          lang: 'en',
          skin: 'gs',
-         classesItems: classesItems}
+         classesItems: classesItems};
     jQuery(textElementSelector).wymeditor(o);
 }
 
-jQuery(window).load(function () {
-    var migrate=null, modules=null;
+jQuery(window).load(function() {
+    var migrate = null, modules = null;
     // Partly nicked from Google Analytics
-    migrate = ('https:' == document.location.protocol ? 'https://' : 'http://')
-        + 'code.jquery.com/jquery-migrate-1.2.1.min.js';
+    migrate = ('https:' == document.location.protocol ?
+               'https://' : 'http://') +
+        'code.jquery.com/jquery-migrate-1.2.1.min.js';
     modules = [migrate, '/++resource++wymeditor-1.0.0b5/jquery.wymeditor.js'];
     gsJsLoader.with_module(modules, gs_content_js_wymeditor_init);
 });

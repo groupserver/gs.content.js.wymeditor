@@ -1,0 +1,16 @@
+.*swp
+node_modules
+compiler.jar
+src/bower_components/*
+dist/AUTHORS
+dist/CHANGELOG.md
+dist/GPL-license.txt
+dist/MIT-license.txt
+dist/package.json
+dist/README.md
+dist/*.gz
+dist/examples/vendor/redundant/*
+src/website/**
+src/jekyll/index.html
+docs/.build/*
+src/lib/*
