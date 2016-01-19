@@ -39,11 +39,12 @@ function gs_content_js_wymeditor_init() {
              expr: '*'}]
     };
     jQuery(textElementSelector).wymeditor(options);
+    // --=mpj17=-- For some reason the WYMeditor does not init rangy
+    rangy.init();
 }
 
 jQuery(window).load(function() {
-    var modules = null;
-    modules = ['/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
-              '/++resource++wymeditor-1.1.1/skins/gs/skin.js'];
+    var modules = ['/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
+                   '/++resource++wymeditor-1.1.1/skins/gs/skin.js'];
     gsJsLoader.with_module(modules, gs_content_js_wymeditor_init);
 });
