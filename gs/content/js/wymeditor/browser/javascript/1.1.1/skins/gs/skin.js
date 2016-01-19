@@ -45,7 +45,8 @@ WYMeditor.SKINS['gs'] = {
         toolbar = jQuery(wym._box).find('div.wym_tools');
         toolbar.addClass('btn-toolbar')
             .find('a')
-            .addClass('btn');
+            .addClass('btn')
+            .removeAttr('href');
         //render following sections as buttons
         jQuery(wym._box).find(wym._options.toolsSelector)
           .addClass('wym_buttons');
