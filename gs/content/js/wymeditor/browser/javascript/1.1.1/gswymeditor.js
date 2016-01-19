@@ -1,6 +1,6 @@
 'use strict';
 //
-// Copyright © 2013, 2015 OnlineGroups.net and Contributors.
+// Copyright © 2013, 2016 OnlineGroups.net and Contributors.
 // All Rights Reserved.
 
 // This software is subject to the provisions of the Zope Public
@@ -15,44 +15,35 @@
 jQuery.noConflict();
 
 function gs_content_js_wymeditor_init() {
-    var scriptElement = null, textElementSelector = null,
-        submitButtonSelector = null, o = null, classesItems = null;
-
+    var scriptElement, textElementSelector, submitButtonSelector, options;
     scriptElement = jQuery('script.gs-content-js-wymeditor');
-    textElementSelector = scriptElement.attr('data-text-element');
-    submitButtonSelector = scriptElement.attr('data-submit');
-
-    classesItems = [
-        {name: 'dotted-inline-list',
-         title: 'Inline list',
-         expr: 'ul'},
-        {name: 'alert',
-         title: 'Alert',
-         expr: 'p, ul, div'},
-        {name: 'small',
-         title: 'Small',
-         expr: '*'}
-    ];
-
-    o = {updateSelector: submitButtonSelector,
-         basePath: '/++resource++wymeditor-1.1.1/',
-         wymPath: '/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
-         jQueryPath: '/++resource++jquery-1.9.1.min.js',
-         iframeBasePath: '/++resource++wymeditor-1.1.1/skins/gs/iframe/',
-         dialogFeatures: 'menubar=no,toobar=no,width=390,height=330',
-         lang: 'en',
-         skin: 'gs',
-         classesItems: classesItems};
-    jQuery(textElementSelector).wymeditor(o);
+    textElementSelector = scriptElement.data('text-element');
+    submitButtonSelector = scriptElement.data('submit');
+    options = {
+        updateSelector: submitButtonSelector,
+        basePath: '/++resource++wymeditor-1.1.1/',
+        wymPath: '/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
+        iframeBasePath: '/++resource++wymeditor-1.1.1/skins/gs/iframe/',
+        dialogFeatures: 'menubar=no,toobar=no,width=390,height=330',
+        lang: 'en',
+        skin: 'gs',
+        classesItems: [
+            {name: 'dotted-inline-list',
+             title: 'Inline list',
+             expr: 'ul'},
+            {name: 'alert',
+             title: 'Alert',
+             expr: 'p, ul, div'},
+            {name: 'small',
+             title: 'Small',
+             expr: '*'}]
+    };
+    jQuery(textElementSelector).wymeditor(options);
 }
 
 jQuery(window).load(function() {
-    var migrate = null, modules = null;
-    // Partly nicked from Google Analytics
-    migrate = ('https:' == document.location.protocol ?
-               'https://' : 'http://') +
-        'code.jquery.com/jquery-migrate-1.2.1.min.js';
-    modules = [migrate, '/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
-               '/++resource++wymeditor-1.1.1/skins/gs/skin.js'];
+    var modules = null;
+    modules = ['/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
+              '/++resource++wymeditor-1.1.1/skins/gs/skin.js'];
     gsJsLoader.with_module(modules, gs_content_js_wymeditor_init);
 });
