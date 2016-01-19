@@ -15,7 +15,21 @@
 jQuery.noConflict();
 
 function gs_content_js_wymeditor_init() {
-    var scriptElement, textElementSelector, submitButtonSelector, options;
+    var scriptElement, textElementSelector, submitButtonSelector, options,
+    dialogHtml = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" ' +
+        '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' +
+        '<html dir="' + WYMeditor.DIRECTION + '">' +
+        '<head>' +
+        '<title>' + WYMeditor.DIALOG_TITLE + '</title>' +
+        '<style type="text/css">body {font:16px/20px sans-serif;}' +
+        'label {display:block;}' +
+        'input {display:block;margin:0.625em 0 1.25em 0.625em;}' +
+        '.row-indent input{display:inline;margin:0 0.625em 0 0;}' +
+        'fieldset {border:none;}' +
+        '.row{padding-left:1.25em;}</style>' +
+        '</head>' +
+        WYMeditor.DIALOG_BODY +
+        '</html>';
     scriptElement = jQuery('script.gs-content-js-wymeditor');
     textElementSelector = scriptElement.data('text-element');
     submitButtonSelector = scriptElement.data('submit');
@@ -24,7 +38,8 @@ function gs_content_js_wymeditor_init() {
         basePath: '/++resource++wymeditor-1.1.1/',
         wymPath: '/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
         iframeBasePath: '/++resource++wymeditor-1.1.1/skins/gs/iframe/',
-        dialogFeatures: 'menubar=no,toobar=no,width=390,height=330',
+        dialogFeatures: 'menubar=no,toobar=no,width=440,height=330',
+        dialogHtml: dialogHtml,
         lang: 'en',
         skin: 'gs',
         classesItems: [
