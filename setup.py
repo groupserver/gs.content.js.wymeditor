@@ -51,7 +51,9 @@ setup(name=name,
         'gs.content.js.jquery.base',
         'gs.content.js.loader', 
    ],
-    extras_require={'zope': ['zope.browserresource', ]},
+    extras_require={
+        'zope': ['zope.browserresource', ],
+        'docs': ['Sphinx', ], },
     entry_points="""
     # -*- Entry points: -*-
     """,
