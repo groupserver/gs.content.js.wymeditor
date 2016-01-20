@@ -1,12 +1,18 @@
 Changelog
 =========
 
-1.1.1 (2016-01-18)
+1.1.1 (2016-01-19)
 ------------------
 
+* Moving the documentation to `Read the Docs`_
 * Following the upstream version
 * Naming the reStructuredText files as such
-* Updating the product metadata
+* Pointing at GitHub_ as the canonical repository
+
+.. _Read the Docs:
+   http://groupserver.readthedocs.org/projects/gscontentjswymeditor
+.. _GitHub:
+   https://github.com/groupserver/gs.content.js.wymeditor
 
 1.0.0b5 (2013-11-14)
 --------------------
