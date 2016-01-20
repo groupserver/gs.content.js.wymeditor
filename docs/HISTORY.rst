@@ -18,6 +18,9 @@ Changelog
 --------------------
 
 Initial version. Prior to the creation of this product the
-WYMeEditor was provided by ``Products.WYMeditor``.
+WYMeEditor was provided by `Products.GSContentManager`_.
+
+.. _Products.GSContentManager:
+   https://github.com/groupserver/Products.GSContentManager
 
 ..  LocalWords:  reStructuredText Changelog
