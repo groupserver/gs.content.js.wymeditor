@@ -30,6 +30,10 @@ function gs_content_js_wymeditor_init() {
         '</head>' +
         WYMeditor.DIALOG_BODY +
         '</html>';
+
+    jQuery('head').append(
+        '<link rel="stylesheet" type="text/css"' +
+        'href="/++resource++wymeditor-1.1.1/skins/gs/skin.css"/>');
     scriptElement = jQuery('script.gs-content-js-wymeditor');
     textElementSelector = scriptElement.data('text-element');
     submitButtonSelector = scriptElement.data('submit');
