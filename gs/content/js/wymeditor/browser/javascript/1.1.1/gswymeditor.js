@@ -33,14 +33,14 @@ function gs_content_js_wymeditor_init() {
 
     jQuery('head').append(
         '<link rel="stylesheet" type="text/css"' +
-        'href="/++resource++wymeditor-1.1.1/skins/gs/skin.css"/>');
+        'href="/++resource++wymeditor-1.1.1/skins/gs/skin-min.css"/>');
     scriptElement = jQuery('script.gs-content-js-wymeditor');
     textElementSelector = scriptElement.data('text-element');
     submitButtonSelector = scriptElement.data('submit');
     options = {
         updateSelector: submitButtonSelector,
         basePath: '/++resource++wymeditor-1.1.1/',
-        wymPath: '/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
+        wymPath: '/++resource++wymeditor-1.1.1/jquery.wymeditor.min.js',
         iframeBasePath: '/++resource++wymeditor-1.1.1/skins/gs/iframe/',
         dialogFeatures: 'menubar=no,toobar=no,width=440,height=330',
         dialogHtml: dialogHtml,
@@ -63,7 +63,7 @@ function gs_content_js_wymeditor_init() {
 }
 
 jQuery(window).load(function() {
-    var modules = ['/++resource++wymeditor-1.1.1/jquery.wymeditor.js',
-                   '/++resource++wymeditor-1.1.1/skins/gs/skin.js'];
+    var modules = ['/++resource++wymeditor-1.1.1/jquery.wymeditor.min.js',
+                   '/++resource++wymeditor-1.1.1/skins/gs/skin-min.js'];
     gsJsLoader.with_module(modules, gs_content_js_wymeditor_init);
 });
