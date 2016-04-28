@@ -10,7 +10,7 @@ Changelog
 * Pointing at GitHub_ as the canonical repository
 
 .. _Read the Docs:
-   http://groupserver.readthedocs.org/projects/gscontentjswymeditor
+   http://groupserver.readthedocs.io/projects/gscontentjswymeditor
 .. _GitHub:
    https://github.com/groupserver/gs.content.js.wymeditor
 
