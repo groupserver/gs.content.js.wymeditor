@@ -65,9 +65,9 @@ Resources
    :width: 21px
    :alt: GitHub Mark
 .. _WYMeditor GitHub organization: https://github.com/wymeditor
-.. _WYMeditor documentation: https://wymeditor.readthedocs.org/
-.. |documentation badge| image:: http://readthedocs.org/projects/pip/badge/
-   :target: https://wymeditor.readthedocs.org/en/latest/
+.. _WYMeditor documentation: https://wymeditor.readthedocs.io/
+.. |documentation badge| image:: http://readthedocs.io/projects/pip/badge/
+   :target: https://wymeditor.readthedocs.io/en/latest/
 .. _WYMeditor issue tracker: https://github.com/wymeditor/wymeditor/issues
 .. _WYMeditor questions in Stack Overflow: https://stackoverflow.com/
    questions/tagged/wymeditor
